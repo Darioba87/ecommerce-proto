@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Nike",
+    "logoUrl": "https://via.placeholder.com/150?text=Nike"
+  },
+  {
+    "id": 2,
+    "name": "Adidas",
+    "logoUrl": "https://via.placeholder.com/150?text=Adidas"
+  },
+  {
+    "id": 3,
+    "name": "Puma",
+    "logoUrl": "https://via.placeholder.com/150?text=Puma"
+  },
+  {
+    "id": 4,
+    "name": "Under Armour",
+    "logoUrl": "https://via.placeholder.com/150?text=Under+Armour"
+  },
+  {
+    "id": 5,
+    "name": "Levi's",
+    "logoUrl": "https://via.placeholder.com/150?text=Levi's"
+  },
+  {
+    "id": 6,
+    "name": "Apple",
+    "logoUrl": "https://via.placeholder.com/150?text=Apple"
+  },
+  {
+    "id": 7,
+    "name": "Dell",
+    "logoUrl": "https://via.placeholder.com/150?text=Dell"
+  },
+  {
+    "id": 8,
+    "name": "HP",
+    "logoUrl": "https://via.placeholder.com/150?text=HP"
+  },
+  {
+    "id": 9,
+    "name": "Lenovo",
+    "logoUrl": "https://via.placeholder.com/150?text=Lenovo"
+  },
+  {
+    "id": 10,
+    "name": "Asus",
+    "logoUrl": "https://via.placeholder.com/150?text=Asus"
+  }
+]

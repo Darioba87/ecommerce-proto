@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "product": "Wireless Headphones",
+    "rating": 4.8,
+    "comment": "Absolutely love it! Highly recommend!",
+    "date": "2023-12-01",
+    "imageUrl": "https://randomuser.me/api/portraits/men/1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "product": "Smartwatch",
+    "rating": 5.0,
+    "comment": "Exceeded my expectations. Fantastic product!",
+    "date": "2023-12-02",
+    "imageUrl": "https://randomuser.me/api/portraits/women/2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Alice Johnson",
+    "product": "Laptop",
+    "rating": 4.7,
+    "comment": "Amazing! Worth every penny.",
+    "date": "2023-12-03",
+    "imageUrl": "https://randomuser.me/api/portraits/women/3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Chris Brown",
+    "product": "Gaming Chair",
+    "rating": 4.9,
+    "comment": "Great quality and fast shipping. Will buy again.",
+    "date": "2023-12-04",
+    "imageUrl": "https://randomuser.me/api/portraits/men/4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Emily Davis",
+    "product": "Camera",
+    "rating": 4.8,
+    "comment": "Best purchase I've made this year!",
+    "date": "2023-12-01",
+    "imageUrl": "https://randomuser.me/api/portraits/women/5.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Michael Wilson",
+    "product": "Wireless Headphones",
+    "rating": 5.0,
+    "comment": "Exceptional sound quality. Would recommend!",
+    "date": "2023-11-30",
+    "imageUrl": "https://randomuser.me/api/portraits/men/6.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Laura Martinez",
+    "product": "Smartwatch",
+    "rating": 4.9,
+    "comment": "Beautiful design and great features.",
+    "date": "2023-11-29",
+    "imageUrl": "https://randomuser.me/api/portraits/women/7.jpg"
+  },
+  {
+    "id": 8,
+    "name": "David Thompson",
+    "product": "Laptop",
+    "rating": 4.8,
+    "comment": "Perfect for my needs. Super fast and reliable.",
+    "date": "2023-12-02",
+    "imageUrl": "https://randomuser.me/api/portraits/men/8.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Sophia White",
+    "product": "Gaming Chair",
+    "rating": 4.7,
+    "comment": "Extremely comfortable and looks amazing.",
+    "date": "2023-12-03",
+    "imageUrl": "https://randomuser.me/api/portraits/women/9.jpg"
+  },
+  {
+    "id": 10,
+    "name": "James Taylor",
+    "product": "Camera",
+    "rating": 5.0,
+    "comment": "Incredible image quality. Highly satisfied!",
+    "date": "2023-12-04",
+    "imageUrl": "https://randomuser.me/api/portraits/men/10.jpg"
+  }
+]
