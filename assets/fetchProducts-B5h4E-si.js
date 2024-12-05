@@ -1,1 +1,0 @@
-import{r as t}from"./index-ClvpFjSF.js";import{g as f}from"./loadChecker-BGnfm0g5.js";const m=(a="")=>{const[s,r]=t.useState([]),[o,c]=t.useState(!0),[n,u]=t.useState(null);return t.useEffect(()=>{(async()=>{try{const e=await f(a);r(e)}catch(e){u(e.message)}finally{c(!1)}})()},[a]),{data:s,loading:o,error:n}};export{m as u};
