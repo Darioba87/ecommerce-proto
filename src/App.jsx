@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./hooks/ScrollToTop";
 import { XyzTransition } from "@animxyz/react";
+import { useLoadingAndError } from "./hooks/loadChecker";
 
 const Home = lazy(() => import("./pages/Home"));
 const Products = lazy(() => import("./pages/Products"));
@@ -16,13 +17,23 @@ export default function App() {
   const basename =
     // eslint-disable-next-line no-undef
     process.env.NODE_ENV === "production" ? "/ecommerce-proto/" : "/";
+
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    setLoading(false);
+    setError(null);
+  }, []);
+
+  const loadingChecker = useLoadingAndError(loading, error);
   return (
     <Router basename={basename}>
       <ScrollToTop />
       <div className="app">
         <Navbar />
         <main>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={loadingChecker}>
             <Routes>
               {/* Animated Routes */}
               <Route

@@ -6,4 +6,11 @@ export default defineConfig({
   plugins: [react()],
   // eslint-disable-next-line no-undef
   base: process.env.NODE_ENV === "production" ? "/ecommerce-proto/" : "/",
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
 });
