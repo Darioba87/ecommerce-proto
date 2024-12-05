@@ -1,24 +1,41 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "../hooks/useCart";
+import { openDB } from "idb";
 
 export default function Navbar() {
-  const [isActive, setIsActive] = useState(false);
   const [cartLength, setCartLength] = useState(0);
-  const { getCartLength } = useCart();
+  const [isActive, setIsActive] = useState(false);
 
   const toggleMenu = () => {
     setIsActive(!isActive);
   };
 
+  const updateCartLength = async () => {
+    try {
+      const db = await openDB("cartDB", 1);
+      const count = await db.count("cart");
+      setCartLength(count || 0); // Update the state with the number of items in the cart
+    } catch (error) {
+      console.error("Failed to fetch cart length from IndexedDB:", error);
+    }
+  };
+
   useEffect(() => {
-    const fetchCartLength = async () => {
-      const length = await getCartLength(); // Fetch cart length
-      setCartLength(length); // Update state
+    // Load initial cart length
+    updateCartLength();
+
+    // Listener for cartUpdated events
+    const handleCartUpdate = () => {
+      updateCartLength();
     };
 
-    fetchCartLength();
-  }, [getCartLength]);
+    window.addEventListener("cartUpdated", handleCartUpdate);
+
+    return () => {
+      // Cleanup the listener on unmount
+      window.removeEventListener("cartUpdated", handleCartUpdate);
+    };
+  }, []);
 
   return (
     <nav
@@ -31,9 +48,7 @@ export default function Navbar() {
           <Link className="navbar-item" to="/">
             <h1 className="title is-4 has-text-white">My Shop</h1>
           </Link>
-
-          <a
-            role="button"
+          <button
             className={`navbar-burger burger ${isActive ? "is-active" : ""}`}
             aria-label="menu"
             aria-expanded="false"
@@ -42,7 +57,7 @@ export default function Navbar() {
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
-          </a>
+          </button>
         </div>
 
         <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>

@@ -23,6 +23,16 @@ export const useCart = () => {
     }
   };
 
+  const broadcastDbChange = (action, product) => {
+    const event = new CustomEvent("cartUpdated", {
+      detail: {
+        action,
+        product,
+      },
+    });
+    window.dispatchEvent(event);
+  };
+
   const loadCart = async () => {
     try {
       const db = await initDB();
@@ -49,7 +59,7 @@ export const useCart = () => {
     try {
       const db = await initDB();
       await db.put(CART_STORE_NAME, product);
-      await getCartLength(); // Update cart length after saving
+      broadcastDbChange();
     } catch (error) {
       console.error("Failed to save item to IndexedDB:", error);
     }
@@ -59,7 +69,7 @@ export const useCart = () => {
     try {
       const db = await initDB();
       await db.delete(CART_STORE_NAME, productId);
-      await getCartLength(); // Update cart length after deletion
+      broadcastDbChange(); // Emit change event
     } catch (error) {
       console.error("Failed to delete item from IndexedDB:", error);
     }
@@ -69,7 +79,7 @@ export const useCart = () => {
     try {
       const db = await initDB();
       await db.clear(CART_STORE_NAME);
-      await getCartLength(); // Update cart length after clearing
+      broadcastDbChange(); // Emit change event
     } catch (error) {
       console.error("Failed to clear cart in IndexedDB:", error);
     }
@@ -86,11 +96,14 @@ export const useCart = () => {
             : item
         );
         saveCartItem(updatedCart.find((item) => item.id === product.id));
+        broadcastDbChange("added", product);
+
         return updatedCart;
       }
 
       const newProduct = { ...product, quantity: 1 };
       saveCartItem(newProduct);
+      broadcastDbChange("added", product);
       return [...prevCart, newProduct];
     });
   };
@@ -110,6 +123,16 @@ export const useCart = () => {
 
   useEffect(() => {
     loadCart();
+
+    const handleCartUpdate = () => {
+      loadCart(); // Reload cart when change is detected
+    };
+
+    window.addEventListener("cartUpdated", handleCartUpdate);
+
+    return () => {
+      window.removeEventListener("cartUpdated", handleCartUpdate);
+    };
   }, []);
 
   return {
