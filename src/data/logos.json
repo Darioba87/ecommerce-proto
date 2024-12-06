@@ -2,51 +2,46 @@
   {
     "id": 1,
     "name": "Nike",
-    "logoUrl": "https://via.placeholder.com/150?text=Nike"
+    "logoUrl": "https://1000marcas.net/wp-content/uploads/2019/11/Logo-Nike-1-500x239.png"
   },
   {
     "id": 2,
     "name": "Adidas",
-    "logoUrl": "https://via.placeholder.com/150?text=Adidas"
+    "logoUrl": "https://1000marcas.net/wp-content/uploads/2024/02/Adidas-Logo-500x281.png"
   },
   {
     "id": 3,
     "name": "Puma",
-    "logoUrl": "https://via.placeholder.com/150?text=Puma"
+    "logoUrl": "https://1000marcas.net/wp-content/uploads/2019/12/logo-Puma-500x249.png"
   },
   {
     "id": 4,
     "name": "Under Armour",
-    "logoUrl": "https://via.placeholder.com/150?text=Under+Armour"
+    "logoUrl": "https://1000marcas.net/wp-content/uploads/2020/03/logo-Under-Armour-500x315.png"
   },
   {
     "id": 5,
     "name": "Levi's",
-    "logoUrl": "https://via.placeholder.com/150?text=Levi's"
-  },
-  {
-    "id": 6,
-    "name": "Apple",
-    "logoUrl": "https://via.placeholder.com/150?text=Apple"
+    "logoUrl": "https://1000marcas.net/wp-content/uploads/2020/01/Levis-Logo.png"
   },
   {
     "id": 7,
     "name": "Dell",
-    "logoUrl": "https://via.placeholder.com/150?text=Dell"
+    "logoUrl": "https://1000marcas.net/wp-content/uploads/2020/03/Dell-Logo-600x338.png"
   },
   {
     "id": 8,
     "name": "HP",
-    "logoUrl": "https://via.placeholder.com/150?text=HP"
+    "logoUrl": "https://1000marcas.net/wp-content/uploads/2021/05/HP-Log%D0%BE-500x281.png"
   },
   {
     "id": 9,
     "name": "Lenovo",
-    "logoUrl": "https://via.placeholder.com/150?text=Lenovo"
+    "logoUrl": "https://1000marcas.net/wp-content/uploads/2020/01/Logo-Lenovo-500x313.png"
   },
   {
     "id": 10,
     "name": "Asus",
-    "logoUrl": "https://via.placeholder.com/150?text=Asus"
+    "logoUrl": "https://1000marcas.net/wp-content/uploads/2020/03/Asus-Logo-500x281.png"
   }
 ]

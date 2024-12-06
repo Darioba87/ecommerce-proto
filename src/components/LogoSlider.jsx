@@ -9,7 +9,7 @@ export default function LogoSlider() {
   const [slides] = useState(logos);
 
   return (
-    <section className="section">
+    <section className="section logo-slider">
       <div className="container">
         <h3 className="title is-3 has-text-centered">Our Sponsors</h3>
         <br />
@@ -21,8 +21,7 @@ export default function LogoSlider() {
             disableOnInteraction: false,
           }}
           speed={5000}
-          loop={false}
-          spaceBetween={5}
+          spaceBetween={10}
           slidesPerView={4}
           breakpoints={{
             640: {
@@ -36,26 +35,10 @@ export default function LogoSlider() {
           {slides.map((logo) => (
             <SwiperSlide key={uuidv4()} virtualIndex={logo.id}>
               {" "}
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  flexDirection: "column",
-                }}
-              >
-                <img
-                  src={logo.logoUrl}
-                  alt={logo.name}
-                  style={{
-                    width: "100px",
-                    height: "100px",
-                    marginBottom: "10px",
-                  }}
-                />
-                <p style={{ fontSize: "14px", textAlign: "center" }}>
-                  {logo.name}
-                </p>
+              <div className=" has-text-centered">
+                <figure className="image is-128x128 is-inline-block">
+                  <img src={logo.logoUrl} alt={logo.name} />
+                </figure>
               </div>
             </SwiperSlide>
           ))}
