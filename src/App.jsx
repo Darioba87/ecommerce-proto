@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./hooks/ScrollToTop";
 import { XyzTransition } from "@animxyz/react";
 import { useLoadingAndError } from "./hooks/loadChecker";
+import "@animxyz/core";
 
 const Home = lazy(() => import("./pages/Home"));
 const Products = lazy(() => import("./pages/Products"));
@@ -40,7 +41,9 @@ export default function App() {
                 path="/"
                 element={
                   <XyzTransition xyz="fade duration-10 ease-in-out">
-                    <Home />
+                    <div>
+                      <Home />
+                    </div>
                   </XyzTransition>
                 }
               />
@@ -48,7 +51,9 @@ export default function App() {
                 path="/products"
                 element={
                   <XyzTransition xyz="fade duration-10 ease-in-out">
-                    <Products />
+                    <div>
+                      <Products />
+                    </div>
                   </XyzTransition>
                 }
               />
@@ -56,7 +61,9 @@ export default function App() {
                 path="/product/:id"
                 element={
                   <XyzTransition xyz="fade duration-10 ease-in-out">
-                    <ProductDetailPage />
+                    <div>
+                      <ProductDetailPage />
+                    </div>
                   </XyzTransition>
                 }
               />
@@ -64,7 +71,9 @@ export default function App() {
                 path="/cart"
                 element={
                   <XyzTransition xyz="fade duration-10 ease-in-out">
-                    <CartPage />
+                    <div>
+                      <CartPage />
+                    </div>
                   </XyzTransition>
                 }
               />
@@ -72,7 +81,9 @@ export default function App() {
                 path="/impressum"
                 element={
                   <XyzTransition xyz="fade duration-10 ease-in-out">
-                    <Impressum />
+                    <div>
+                      <Impressum />
+                    </div>
                   </XyzTransition>
                 }
               />
@@ -80,7 +91,9 @@ export default function App() {
                 path="*"
                 element={
                   <XyzTransition xyz="fade duration-10 ease-in-out">
-                    <NotFound />
+                    <div>
+                      <NotFound />
+                    </div>
                   </XyzTransition>
                 }
               />

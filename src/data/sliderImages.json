@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "imageUrl": "https://images.unsplash.com/photo-1539874754764-5a96559165b0?q=80&w=2460&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "altText": "Luxury wristwatch on display",
+    "caption": "Elegance in every second"
+  },
+  {
+    "id": 2,
+    "imageUrl": "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "altText": "Stylish sunglasses on a table",
+    "caption": "Protect your eyes with style"
+  },
+  {
+    "id": 3,
+    "imageUrl": "https://plus.unsplash.com/premium_photo-1723826753083-2309f7203ab1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "altText": "Premium leather handbag",
+    "caption": "Carry your essentials with sophistication"
+  },
+  {
+    "id": 4,
+    "imageUrl": "https://plus.unsplash.com/premium_photo-1661645473770-90d750452fa0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "altText": "Elegant jewelry on a stand",
+    "caption": "Shine bright with exclusive designs"
+  },
+  {
+    "id": 5,
+    "imageUrl": "https://images.unsplash.com/photo-1709639288121-efe2eb002517?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "altText": "Classic leather wallet on a wooden table",
+    "caption": "Timeless accessories for modern lifestyles"
+  }
+]
